@@ -77,10 +77,10 @@ const Navbar = () => {
                                     <img src={user?.photoURL} />
                                 </div>
                             </label>
-                            <ul tabIndex={0} className="dropdown-content mt-3 z-[1] p-4 shadow bg-gray-100 rounded-box w-52">
-                                <li className="text-lg font-medium">{user?.displayName}</li>
+                            <ul tabIndex={0} className="dropdown-content mt-3 z-20 p-4 shadow bg-blue-100 rounded w-52">
+                                <li className="text-lg font-medium mb-2">{user?.displayName}</li>
                                 <li>
-                                    <button onClick={handleSignOut} className="bg-blue-500 py-2 px-4 rounded-lg text-white">Sign Out</button>
+                                    <button onClick={handleSignOut} className="bg-blue-500 py-2 px-4 rounded-lg w-full text-white">Sign Out</button>
                                 </li>
                             </ul>
                         </div>

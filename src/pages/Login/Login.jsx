@@ -1,9 +1,12 @@
 import { useContext } from "react";
-import { Link } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import { AuthContext } from "../../providers/AuthProvider";
+import { ToastContainer, toast } from "react-toastify";
+import 'react-toastify/dist/ReactToastify.css';
 
 const Login = () => {
-
+    const location = useLocation();
+    const navigate = useNavigate();
     const { singIn, signInWithGoogle } = useContext(AuthContext)
 
     const handleLogIn = e => {
@@ -16,9 +19,18 @@ const Login = () => {
         singIn(email, password)
             .then(result => {
                 console.log(result.user);
+                toast.success('Login Successful', {
+                    theme: "colored",
+                })
+                setTimeout(() => {
+                    navigate(location?.state ? location.state : '/')
+                }, 2000);
             })
             .catch(error => {
                 console.error(error);
+                toast.error("Email or password does not match.", {
+                    theme: "colored",
+                });
             })
     }
 
@@ -26,9 +38,18 @@ const Login = () => {
         signInWithGoogle()
             .then(result => {
                 console.log(result.user);
+                toast.success('Login Successful', {
+                    theme: "colored",
+                })
+                setTimeout(() => {
+                    navigate(location?.state ? location.state : '/')
+                }, 2000);
             })
             .catch(error => {
                 console.error(error);
+                toast.error("Email or password does not match.", {
+                    theme: "colored",
+                });
             })
     }
 
@@ -54,6 +75,7 @@ const Login = () => {
                     </p>
                 </form>
             </div>
+            <ToastContainer></ToastContainer>
         </div>
     );
 };
