@@ -36,65 +36,62 @@ const AddProduct = () => {
             })
     }
     return (
-        <div className="max-w-4xl mx-auto my-20 p-10 rounded-lg bg-base shadow-xl">
-            <h1 className="text-2xl font-semibold mb-4">Add Product</h1>
-            <form onSubmit={handleAddProduct}>
-                <div className="mb-4">
-                    <label className="block text-gray-600 font-medium">Image URL:</label>
-                    <input type="text" name="image" className="w-full px-3 py-2 border rounded-lg"
-                    />
-                </div>
-                <div className="mb-4">
-                    <label className="block text-gray-600 font-medium">Name:</label>
-                    <input type="text" name="name" className="w-full px-3 py-2 border rounded-lg"
-                    />
-                </div>
-                <div className="mb-4">
-                    <label className="block text-gray-600 font-medium">Brand Name:</label>
-                    <select name="brand" className="w-full px-3 py-2 border rounded-lg"
-                    >
-                        <option value="apple">Apple</option>
-                        <option value="samsung">Samsung</option>
-                        <option value="google">Google</option>
-                        <option value="lenovo">Lenovo</option>
-                        <option value="Sony">Sony</option>
-                        <option value="Walton">Walton</option>
-                    </select>
-                </div>
-                <div className="mb-4">
-                    <label className="block text-gray-600 font-medium">Type:</label>
-                    <select name="type" className="w-full px-3 py-2 border rounded-lg">
-                        <option value="phone">Phone</option>
-                        <option value="laptop">Laptop</option>
-                        <option value="computer">Computer</option>
-                        <option value="headphone">Headphone</option>
-                    </select>
-                </div>
-                <div className="mb-4">
-                    <label className="block text-gray-600 font-medium">Price:</label>
-                    <input type="text" name="price" className="w-full px-3 py-2 border rounded-lg"
-                    />
-                </div>
-                <div className="mb-4">
-                    <label className="block text-gray-600 font-medium">Description:</label>
-                    <textarea name="description"
-                        className="w-full px-3 py-2 border rounded-lg"
-                    />
-                </div>
-                <div className="mb-4">
-                    <label className="block text-gray-600 font-medium">Rating:</label>
-                    <select name="rating" className="w-full px-3 py-2 border rounded-lg"
-                    >
-                        <option value="1">1</option>
-                        <option value="2">2</option>
-                        <option value="3">3</option>
-                        <option value="4">4</option>
-                        <option value="5">5</option>
-                    </select>
-                </div>
-                <button className="bg-blue-500 text-white px-4 py-2 rounded-lg w-full hover:bg-blue-600"
-                > Add Product </button>
-            </form>
+        <div className="min-h-screen bg-gray-100 flex items-center justify-center">
+            <div className="w-11/12 md:w-3/4 bg-white my-10 md:my-20 p-6 md:p-10 rounded-md shadow">
+                <h1 className="text-2xl font-semibold mb-4">Add Product</h1>
+                <form onSubmit={handleAddProduct}>
+                    <div className="mb-4">
+                        <label className="block text-gray-600 font-medium">Image URL:</label>
+                        <input type="text" name="image" placeholder="Photo URL" className="w-full px-3 py-2 border rounded-lg" required />
+                    </div>
+                    <div className="mb-4">
+                        <label className="block text-gray-600 font-medium">Name:</label>
+                        <input type="text" name="name" placeholder="Product Name" className="w-full px-3 py-2 border rounded-lg" required />
+                    </div>
+                    <div className="mb-4">
+                        <label className="block text-gray-600 font-medium">Brand Name:</label>
+                        <select name="brand" className="w-full px-3 py-2 border rounded-lg"
+                        >
+                            <option value="apple">Apple</option>
+                            <option value="samsung">Samsung</option>
+                            <option value="google">Google</option>
+                            <option value="lenovo">Lenovo</option>
+                            <option value="Sony">Sony</option>
+                            <option value="Walton">Walton</option>
+                        </select>
+                    </div>
+                    <div className="mb-4">
+                        <label className="block text-gray-600 font-medium">Type:</label>
+                        <select name="type" className="w-full px-3 py-2 border rounded-lg">
+                            <option value="phone">Phone</option>
+                            <option value="laptop">Laptop</option>
+                            <option value="computer">Computer</option>
+                            <option value="headphone">Headphone</option>
+                        </select>
+                    </div>
+                    <div className="mb-4">
+                        <label className="block text-gray-600 font-medium">Price:</label>
+                        <input type="text" name="price" placeholder="Price" className="w-full px-3 py-2 border rounded-lg" required />
+                    </div>
+                    <div className="mb-4">
+                        <label className="block text-gray-600 font-medium">Description:</label>
+                        <textarea name="description" placeholder="Short Description" className="w-full px-3 py-2 border rounded-lg" required />
+                    </div>
+                    <div className="mb-4">
+                        <label className="block text-gray-600 font-medium">Rating:</label>
+                        <select name="rating" className="w-full px-3 py-2 border rounded-lg"
+                        >
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5</option>
+                        </select>
+                    </div>
+                    <button className="bg-blue-500 text-white px-4 py-2 rounded-lg w-full hover:bg-blue-600"
+                    > Add Product </button>
+                </form>
+            </div>
         </div>
     );
 };

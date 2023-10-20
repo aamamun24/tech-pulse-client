@@ -15,8 +15,6 @@ const Register = () => {
         const photo = form.photo.value;
         const email = form.email.value;
         const password = form.password.value;
-        // const user = { name, photo, email, password }
-        // console.log(user);
 
         createUser(email, password)
             .then(result => {
@@ -32,8 +30,8 @@ const Register = () => {
     }
     return (
         <div className="min-h-screen bg-gray-100 flex items-center justify-center">
-            <div className="bg-white p-8 rounded-lg shadow-md w-2/3 md:w-2/4">
-                <h2 className="text-2xl font-semibold mb-6">Register Your Account</h2>
+            <div className="bg-white p-8 rounded-lg shadow-md w-11/12 md:w-96 my-10">
+                <h2 className="text-xl font-semibold mb-6">Register Your Account</h2>
                 <form onSubmit={handleRegister}>
                     <div className="mb-4">
                         <label className="block text-gray-600 text-sm font-medium mb-2">Name</label>

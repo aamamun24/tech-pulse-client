@@ -53,14 +53,14 @@ const Navbar = () => {
                     <label tabIndex={0} className="btn btn-ghost lg:hidden">
                         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" className="inline-block w-5 h-5 stroke-current"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h16M4 18h16"></path></svg>
                     </label>
-                    <ul tabIndex={0} className="dropdown-content mt-3 z-[1] p-4 shadow bg-base-100 rounded-box w-52">
+                    <ul tabIndex={0} className="dropdown-content mt-3 z-20 p-4 shadow bg-blue-100 rounded w-44">
                         {navLinks}
                     </ul>
                 </div>
                 <Link to="/">
                     <div className="flex items-center gap-3">
                         <img className="w-12" src={logo} alt="" />
-                        <h2 className="text-xl font-bold">Tech Pulse</h2>
+                        <h2 className="text-lg md:text-xl font-semibold md:font-bold">Tech Pulse</h2>
                     </div></Link>
             </div>
             <div className="navbar-center hidden lg:flex">
