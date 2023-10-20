@@ -1,7 +1,17 @@
 import { Link, NavLink } from "react-router-dom";
 import logo from '/tech-pulse.png'
+import { useContext } from "react";
+import { AuthContext } from "../../../providers/AuthProvider";
 
 const Navbar = () => {
+
+    const { user, logOut } = useContext(AuthContext)
+
+    const handleSignOut = () => {
+        logOut()
+            .then()
+            .catch()
+    }
 
     const navLinks = <>
         <li>
@@ -59,7 +69,24 @@ const Navbar = () => {
                 </ul>
             </div>
             <div className="navbar-end">
-                <Link to='/login' className="bg-[#157ED2] py-2 px-6 rounded-lg text-white font-medium">Login</Link>
+                {
+                    user ?
+                        <div className="dropdown dropdown-end">
+                            <label tabIndex={0} className="btn btn-ghost btn-circle avatar">
+                                <div className="w-10 rounded-full">
+                                    <img src={user?.photoURL} />
+                                </div>
+                            </label>
+                            <ul tabIndex={0} className="dropdown-content mt-3 z-[1] p-4 shadow bg-gray-100 rounded-box w-52">
+                                <li className="text-lg font-medium">{user?.displayName}</li>
+                                <li>
+                                    <button onClick={handleSignOut} className="bg-blue-500 py-2 px-4 rounded-lg text-white">Sign Out</button>
+                                </li>
+                            </ul>
+                        </div>
+                        :
+                        <Link to='/login' className="bg-blue-500 py-2 px-6 rounded-lg text-white font-medium">Login</Link>
+                }
             </div>
         </div>
     );
