@@ -1,6 +1,7 @@
 import { useLoaderData } from "react-router-dom";
 import Banner from "./Banner";
 import Brand from "./Brand";
+import Sections from "./Sections";
 
 const Home = () => {
 
@@ -16,6 +17,7 @@ const Home = () => {
                     }
                 </div>
             </div>
+            <Sections></Sections>
         </div>
     );
 };

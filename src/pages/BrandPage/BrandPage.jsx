@@ -1,12 +1,13 @@
-import { useLoaderData } from "react-router-dom";
+import { useLoaderData, useParams } from "react-router-dom";
 import ProductCard from "./ProductCard";
 import slider1 from '../../assets/slider1.jpg';
 import slider2 from '../../assets/slider2.jpg';
 import slider3 from '../../assets/slider3.jpg';
 
 const BrandPage = () => {
-
-    const products = useLoaderData()
+    const { id } = useParams()
+    const loadedProducts = useLoaderData()
+    const products = loadedProducts.filter(product => product.brand.toLowerCase() === id.toLowerCase())
 
     return (
         <div>
