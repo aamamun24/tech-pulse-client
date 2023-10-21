@@ -17,7 +17,7 @@ const CartData = ({ cart, carts, setCarts }) => {
         })
             .then((result) => {
                 if (result.isConfirmed) {
-                    fetch(`http://localhost:5000/cart/${id}`, {
+                    fetch(`https://tech-pulse-server.vercel.app/cart/${id}`, {
                         method: 'DELETE'
                     })
                         .then(res => res.json())
@@ -29,7 +29,7 @@ const CartData = ({ cart, carts, setCarts }) => {
                                     'Your product has been deleted.',
                                     'success'
                                 )
-                                const remaining = carts.filter(sigleCart => sigleCart._id !== _id)
+                                const remaining = carts.filter(singleCart => singleCart._id !== _id)
                                 setCarts(remaining)
                             }
                         })

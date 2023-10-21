@@ -1,4 +1,4 @@
-import { Link, useLoaderData, useParams } from "react-router-dom";
+import { useLoaderData, useParams } from "react-router-dom";
 import Swal from "sweetalert2";
 
 const ProductDetails = () => {
@@ -8,7 +8,7 @@ const ProductDetails = () => {
     const { _id, name, image, brand, type, price, description, rating } = product;
 
     const handleAddToCart = () => {
-        fetch('http://localhost:5000/cart', {
+        fetch('https://tech-pulse-server.vercel.app/cart', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'

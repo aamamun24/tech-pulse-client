@@ -1,0 +1,20 @@
+[
+  {
+    "id": 1,
+    "name": "Emily S.",
+    "title": "Happy Shopper",
+    "review": "I love the products I bought from this website. Excellent quality and great service!"
+  },
+  {
+    "id": 2,
+    "name": "Michael P.",
+    "title": "Impressed Customer",
+    "review": "Good selection of products. Quick delivery and responsive customer support."
+  },
+  {
+    "id": 3,
+    "name": "Sophia R.",
+    "title": "Repeat Shopper",
+    "review": "I'm a satisfied customer.The products are exactly as described, and the prices are reasonable."
+  }
+]

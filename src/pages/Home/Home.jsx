@@ -1,7 +1,8 @@
 import { useLoaderData } from "react-router-dom";
 import Banner from "./Banner";
 import Brand from "./Brand";
-import Sections from "./Sections";
+import Contact from "./Contact";
+import Testimonials from "./Testimonials";
 
 const Home = () => {
 
@@ -17,7 +18,8 @@ const Home = () => {
                     }
                 </div>
             </div>
-            <Sections></Sections>
+            <Testimonials></Testimonials>
+            <Contact></Contact>
         </div>
     );
 };

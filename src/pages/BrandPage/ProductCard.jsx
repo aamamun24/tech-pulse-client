@@ -2,7 +2,7 @@ import PropTypes from 'prop-types';
 import { Link } from 'react-router-dom';
 
 const ProductCard = ({ product }) => {
-    const { _id, name, image, brand, type, price, description, rating } = product;
+    const { _id, name, image, brand, type, price, rating } = product;
 
     return (
         <div className="rounded-lg overflow-hidden shadow-lg">

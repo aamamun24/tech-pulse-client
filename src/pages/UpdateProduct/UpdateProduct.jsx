@@ -3,7 +3,7 @@ import Swal from "sweetalert2";
 
 const UpdateProduct = () => {
     const product = useLoaderData()
-    const { _id, name, image, brand, type, price, description, rating } = product;
+    const { _id, name, image, brand, price, description } = product;
 
     const handleUpdateProduct = e => {
         e.preventDefault()
@@ -19,7 +19,7 @@ const UpdateProduct = () => {
         const updatedProduct = { image, name, brand, type, price, description, rating }
         console.log(updatedProduct);
 
-        fetch(`http://localhost:5000/products/${_id}`, {
+        fetch(`https://tech-pulse-server.vercel.app/products/${_id}`, {
             method: 'PUT',
             headers: {
                 'content-type': 'application/json'

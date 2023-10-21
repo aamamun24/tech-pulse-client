@@ -25,12 +25,12 @@ const router = createBrowserRouter([
             {
                 path: "/:id",
                 element: <BrandPage></BrandPage>,
-                loader: () => fetch('http://localhost:5000/products')
+                loader: () => fetch('https://tech-pulse-server.vercel.app/products')
             },
             {
                 path: "/:id/:id",
                 element: <PrivateRoute><ProductDetails></ProductDetails></PrivateRoute>,
-                loader: () => fetch('http://localhost:5000/products')
+                loader: () => fetch('https://tech-pulse-server.vercel.app/products')
             },
             {
                 path: "/add-product",
@@ -39,12 +39,12 @@ const router = createBrowserRouter([
             {
                 path: "/update-product/:id",
                 element: <PrivateRoute><UpdateProduct></UpdateProduct></PrivateRoute>,
-                loader: ({ params }) => fetch(`http://localhost:5000/products/${params.id}`)
+                loader: ({ params }) => fetch(`https://tech-pulse-server.vercel.app/products/${params.id}`)
             },
             {
                 path: "/my-cart",
                 element: <PrivateRoute><Cart></Cart></PrivateRoute>,
-                loader: () => fetch('http://localhost:5000/cart')
+                loader: () => fetch('https://tech-pulse-server.vercel.app/cart')
             },
             {
                 path: "/login",
