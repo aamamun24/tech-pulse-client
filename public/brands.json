@@ -1,0 +1,32 @@
+[
+  {
+    "id": "apple",
+    "name": "Apple",
+    "image": "https://i.ibb.co/7NF9JZW/apple-logo-transparent.png"
+  },
+  {
+    "id": "samsung",
+    "name": "Samsung",
+    "image": "https://i.ibb.co/SBwfcMc/Samsung-Logo-svg.png"
+  },
+  {
+    "id": "google",
+    "name": "Google",
+    "image": "https://i.ibb.co/Rz27770/Google-2015-logo-svg.png"
+  },
+  {
+    "id": "lenovo",
+    "name": "Lenovo",
+    "image": "https://i.ibb.co/C2GDs9F/2560px-Lenovo-Global-Corporate-Logo.png"
+  },
+  {
+    "id": "sony",
+    "name": "Sony",
+    "image": "https://i.ibb.co/hC8yk1R/Sony-Logo-1957.png"
+  },
+  {
+    "id": "walton",
+    "name": "Walton",
+    "image": "https://i.ibb.co/VpX4vBJ/walton-logo-8655-B6-D7-F3-seeklogo-com.png"
+  }
+]

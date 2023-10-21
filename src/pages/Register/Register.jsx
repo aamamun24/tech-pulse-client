@@ -39,14 +39,21 @@ const Register = () => {
 
         createUser(email, password)
             .then(result => {
-                console.log(result.user);
+                // console.log(result.user);
                 userUpdatedProfile(name, photo)
                     .then(() => {
-                        console.log('profile created');
+                        toast.success('Registration Complete Successfully', {
+                            theme: "colored",
+                        });
+                        setTimeout(() => {
+                            navigate('/')
+                        }, 2000);
                     })
             })
             .catch(error => {
-                console.error(error);
+                toast.error(error.message, {
+                    theme: "colored",
+                });
             })
     }
     return (

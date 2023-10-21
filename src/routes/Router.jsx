@@ -6,6 +6,7 @@ import AddProduct from "../pages/AddProduct/AddProduct";
 import Login from "../pages/Login/Login";
 import Register from "../pages/Register/Register";
 import PrivateRoute from "./PrivateRoute";
+import BrandPage from "../pages/BrandPage/BrandPage";
 
 const router = createBrowserRouter([
     {
@@ -15,7 +16,13 @@ const router = createBrowserRouter([
         children: [
             {
                 path: "/",
-                element: <Home></Home>
+                element: <Home></Home>,
+                loader: () => fetch(`/brands.json`)
+            },
+            {
+                path: "/:id",
+                element: <BrandPage></BrandPage>,
+                loader: () => fetch(`/brands.json`)
             },
             {
                 path: "/add-product",
