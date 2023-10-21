@@ -52,10 +52,10 @@ const AddProduct = () => {
                         <label className="block text-gray-600 font-medium">Brand Name:</label>
                         <select name="brand" className="w-full px-3 py-2 border rounded-lg"
                         >
-                            <option value="apple">Apple</option>
-                            <option value="samsung">Samsung</option>
-                            <option value="google">Google</option>
-                            <option value="lenovo">Lenovo</option>
+                            <option value="Apple">Apple</option>
+                            <option value="Samsung">Samsung</option>
+                            <option value="Google">Google</option>
+                            <option value="Lenovo">Lenovo</option>
                             <option value="Sony">Sony</option>
                             <option value="Walton">Walton</option>
                         </select>
@@ -63,10 +63,10 @@ const AddProduct = () => {
                     <div className="mb-4">
                         <label className="block text-gray-600 font-medium">Type:</label>
                         <select name="type" className="w-full px-3 py-2 border rounded-lg">
-                            <option value="phone">Phone</option>
-                            <option value="laptop">Laptop</option>
-                            <option value="computer">Computer</option>
-                            <option value="headphone">Headphone</option>
+                            <option value="Phone">Phone</option>
+                            <option value="Laptop">Laptop</option>
+                            <option value="Computer">Computer</option>
+                            <option value="Headphone">Headphone</option>
                         </select>
                     </div>
                     <div className="mb-4">
