@@ -3,9 +3,10 @@ import { Link } from 'react-router-dom';
 
 const ProductCard = ({ product }) => {
     const { _id, name, image, brand, type, price, description, rating } = product;
+
     return (
         <div className="rounded-lg overflow-hidden shadow-lg">
-            <img className="w-full" src={image} alt={name} />
+            <img className="w-full h-96" src={image} alt={name} />
             <div className="px-6 py-4">
                 <div className="font-bold text-xl mb-2">{name}</div>
                 <p>Brand: {brand}</p>
