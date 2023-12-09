@@ -1,5 +1,5 @@
 ## Tech Pulse
-[https://tech-pulses.web.app/](https://tech-pulses.web.app/)
+[Tech Pulse Live](https://tech-pulses.web.app/)
 
 
 ## Features of the project
